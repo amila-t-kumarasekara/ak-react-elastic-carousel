@@ -4,7 +4,7 @@ updated version of react-elastic-carousel
 
 
 ------------------------------------------------------
-https://www.npmjs.com/package/react-carousel-elasticss
+https://www.npmjs.com/package/elastic-carousel
 ------------------------------------------------------
 
 All the credits belong to the owner of the react-elastic-carousel
@@ -20,6 +20,6 @@ A flexible and responsive carousel component for react https://sag1v.github.io/r
 
 #importing the package 
 
-import Carousel from "react-carousel-elasticss";
+import Carousel from "elastic-carousel";
 
 
