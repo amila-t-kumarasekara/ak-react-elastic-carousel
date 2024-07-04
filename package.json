@@ -9,7 +9,7 @@
   "types": "./dist/index.d.ts",
   "jsnext:main": "dist/index.es.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
