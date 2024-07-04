@@ -5,7 +5,7 @@ on:
       branches:
         - master
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build:
@@ -33,7 +33,7 @@ jobs:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
           scope: "@amila-t-kumarasekara"
-      - run: npm ci
+      - run: npm ci && npm run build
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_GITHUB_TOKEN}}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
