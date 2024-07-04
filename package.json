@@ -1,5 +1,5 @@
 {
-  "name": "@ak/react-elastic-carousel",
+  "name": "elastic-carousel",
   "version": "0.13.0",
   "description": "A flexible and responsive carousel component for react",
   "author": "Amila Kumarasekara",
@@ -8,10 +8,6 @@
   "module": "dist/index.es.js",
   "types": "./dist/index.d.ts",
   "jsnext:main": "dist/index.es.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/amila-t-kumarasekara/ak-react-elastic-carousel.git"
