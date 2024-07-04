@@ -32,7 +32,6 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
-          scope: "@amila-t-kumarasekara"
       - run: npm ci && npm run build
       - run: npm publish
         env:
