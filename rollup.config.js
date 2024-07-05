@@ -37,8 +37,8 @@ module.exports = {
     url(),
     babel({
       exclude: 'node_modules/**',
-      babelHelpers: "external",
-      plugins: [ '@babel/external-helpers' ]
+      babelHelpers: "runtime",
+      plugins: [ '@babel/plugin-transform-runtime' ]
     }),
     resolve(),
     commonjs({

@@ -761,6 +761,7 @@ class Carousel extends React.Component {
   };
 
   render() {
+    
     const {
       activePage,
       isSwiping,

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { mount, shallow } from "enzyme";
 import Carousel from "../Carousel";
 import Slider from "../styled/Slider";
@@ -23,8 +23,9 @@ describe("Carousel - public API (props)", () => {
   });
 
   it("one child wont break on next", () => {
-    const wrapper = mount(<Carousel>{Items[0]}</Carousel>);
-    const nextButton = wrapper.find(Carousel).find("button.rec-arrow-right");
+    const ref = React.createRef();
+    const wrapper = mount(<Carousel ref={ref}>{Items[0]}</Carousel>);
+    const nextButton = wrapper.find("button.rec-arrow-right");
     nextButton.simulate("click");
   });
 
