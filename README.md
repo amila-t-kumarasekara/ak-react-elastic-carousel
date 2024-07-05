@@ -23,3 +23,7 @@ A flexible and responsive carousel component for react https://sag1v.github.io/r
 import Carousel from "elastic-carousel";
 
 
+
+-------------------------------------------------------------------------------------
+---Looking for Maintainers---
+

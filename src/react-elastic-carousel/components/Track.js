@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Swipeable } from "react-swipeable";
+import { useSwipeable } from "react-swipeable";  // Import useSwipeable instead of Swipeable
 import { cssPrefix } from "../utils/helpers";
 import ItemWrapperContainer from "./ItemWrapperContainer";
 
@@ -61,24 +61,29 @@ const Track = ({
       </div>
     );
   });
+
+  const swipeHandlers = useSwipeable({
+    onSwiped,
+    onSwiping,
+    trackMouse: enableMouseSwipe,
+    preventDefaultTouchmoveEvent
+  });
+
   const toRender = enableSwipe ? (
-    <Swipeable
+    <div
+      {...swipeHandlers}
       style={{
         display: "flex",
         flexDirection: verticalMode ? "column" : "row"
       }}
-      stopPropagation
-      preventDefaultTouchmoveEvent={preventDefaultTouchmoveEvent}
-      trackMouse={enableMouseSwipe}
-      onSwiped={onSwiped}
-      onSwiping={onSwiping}
       className={cssPrefix("swipable")}
     >
       {originalChildren}
-    </Swipeable>
+    </div>
   ) : (
     originalChildren
   );
+
   return toRender;
 };
 
