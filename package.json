@@ -1,6 +1,6 @@
 {
   "name": "elastic-carousel",
-  "version": "0.13.3",
+  "version": "0.13.4",
   "description": "A flexible and responsive carousel component for react",
   "author": "Amila Kumarasekara",
   "license": "MIT",
@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@babel/plugin-transform-runtime": "^7.24.7",
+    "@babel/runtime": "^7.24.7",
     "@uiw/react-only-when": "^2.0.2",
     "classnames": "^2.3.2",
     "react-swipeable": "^7.0.1",
