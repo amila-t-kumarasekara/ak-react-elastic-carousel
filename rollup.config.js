@@ -1,10 +1,10 @@
 const babel = require('@rollup/plugin-babel');
- const commonjs = require('rollup-plugin-commonjs');
+ const commonjs = require('@rollup/plugin-commonjs');
  const postcss = require('rollup-plugin-postcss');
- const resolve = require('rollup-plugin-node-resolve');
- const url = require('rollup-plugin-url');
- const alias = require('rollup-plugin-alias');
-const external = require('rollup-plugin-auto-external');
+ const resolve = require('@rollup/plugin-node-resolve');
+ const url = require('@rollup/plugin-url');
+ const alias = require('@rollup/plugin-alias');
+const external = require('@types/rollup-plugin-auto-external');
 const copy = require('rollup-plugin-copy');
 
 const pkg = require('./package.json');
