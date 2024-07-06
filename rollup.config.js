@@ -4,7 +4,7 @@ const babel = require('@rollup/plugin-babel');
  const resolve = require('@rollup/plugin-node-resolve');
  const url = require('@rollup/plugin-url');
  const alias = require('@rollup/plugin-alias');
-const external = require('@types/rollup-plugin-auto-external');
+const external = require('rollup-plugin-auto-external');
 const copy = require('rollup-plugin-copy');
 
 const pkg = require('./package.json');
