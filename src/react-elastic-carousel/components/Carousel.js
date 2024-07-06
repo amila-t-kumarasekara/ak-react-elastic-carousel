@@ -17,6 +17,12 @@ import { pipe, noop, cssPrefix, numberToArray } from "../utils/helpers";
 import { Pagination } from "./Pagination";
 
 class Carousel extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.tiltMovement = this.tiltMovement.bind(this);
+  }
+  
   isComponentMounted = false;
   state = {
     rootHeight: 0,
@@ -335,19 +341,20 @@ class Carousel extends React.Component {
   };
 
   tiltMovement = (position, distance = 20, duration = 150) => {
-    this.setState(state => {
-      return {
+    this.setState(sliderState => ({
+        ...sliderState,
         isSwiping: true,
         swipedSliderPosition: position - distance
-      };
-    });
+    }));
+
     setTimeout(() => {
-      this.setState({
-        isSwiping: false,
-        swipedSliderPosition: 0
-      });
+        this.setState({
+            isSwiping: false,
+            swipedSliderPosition: 0
+        });
     }, duration);
   };
+
 
   convertChildToCbObj = index => {
     const { children } = this.getDerivedPropsFromBreakPoint();
@@ -761,7 +768,6 @@ class Carousel extends React.Component {
   };
 
   render() {
-    
     const {
       activePage,
       isSwiping,
