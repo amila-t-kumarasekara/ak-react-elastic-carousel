@@ -32,7 +32,6 @@
     "lint:watch": "esw --watch --fix src/*",
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
-    "prebuild": "yarn run lint:fix",
     "build": "rollup -c"
   },
   "lint-staged": {

@@ -31,7 +31,7 @@ yarn add elastic-carousel
 `elastic-carousel` is using [styled-components](https://github.com/styled-components/styled-components) for styling, this means that you should install it as well:
 
 ```bash
-npm install --save styled-components
+npm install --save styled-components@5.3.11
 ```
 
 ## Usage
