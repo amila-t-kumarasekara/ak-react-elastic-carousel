@@ -37,7 +37,9 @@ describe("Carousel - public API (props)", () => {
     const ref = React.createRef();
     const wrapper = mount(<Carousel ref={ref}>{Items[0]}</Carousel>);
     const nextButton = wrapper.find("button.rec-arrow-right");
-    nextButton.prop('onClick')();
+    React.act(() => {
+      nextButton.prop('onClick')();
+    });
   });
 
   it("renders with className in root", () => {
@@ -64,11 +66,15 @@ describe("Carousel - public API (props)", () => {
       </Carousel>
     );
   
-    wrapper.instance().tiltMovement(100);
-  
-    await new Promise(resolve => setTimeout(resolve, 150));
-  
-    wrapper.update();
+    React.act(() => {
+      wrapper.instance().tiltMovement(100);
+    });
+    
+    await React.act(async () => {
+      await new Promise(resolve => setTimeout(resolve, 150));
+      wrapper.update();
+    });
+    
   });
   
 
