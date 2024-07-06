@@ -1,5 +1,5 @@
 const babel = require('@rollup/plugin-babel');
- const commonjs = require('@rollup/plugin-commonjs');
+//  const commonjs = require('@rollup/plugin-commonjs');
  const postcss = require('rollup-plugin-postcss');
  const resolve = require('@rollup/plugin-node-resolve');
  const url = require('@rollup/plugin-url');
@@ -41,12 +41,13 @@ module.exports = {
       plugins: [ '@babel/plugin-transform-runtime' ]
     }),
     resolve(),
-    commonjs({
-      include: 'node_modules/**',
-      namedExports: {
-        'node_modules/react-is/index.js': ['isValidElementType']
-      }
-    }),
+    //removing commonjs because The namedExports option from "@rollup/plugin-commonjs" is deprecated. Named exports are now handled automatically
+    // commonjs({
+    //   include: 'node_modules/**',
+    //   namedExports: {
+    //     'node_modules/react-is/index.js': ['isValidElementType']
+    //   }
+    // }),
     copy({
       targets: [{ src: `src/${libName}/index.d.ts`, dest: "dist" }],
     })
