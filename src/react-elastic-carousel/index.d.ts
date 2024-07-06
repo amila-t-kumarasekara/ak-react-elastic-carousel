@@ -28,13 +28,17 @@ export type Breakpoint = {
 };
 
 export interface ReactElasticCarouselProps {
+  children?: React.ReactNode;
+  // Defaults to false
+  style?: React.CSSProperties;
+  // Defaults to false
   className?: string;
   // Defaults to 1
   itemsToShow?: number;
   // Defaults to false
   verticalMode?: boolean;
   // Defaults to false
-  isRTL: boolean;
+  isRTL?: boolean;
   // Defaults to true
   pagination?: boolean;
   // Defaults to 500
@@ -106,10 +110,13 @@ export interface ReactElasticCarouselProps {
   onPrevEnd?: (nextItemObject: ItemObject, currentPageIndex: number) => void;
   // A callback for the "slider-container" resize
   onResize?: (currentBreakpoint: Breakpoint) => void;
+  // Accessibility props
+  ariaLabel?: string;
+  role?: string;
 }
 
 declare class ReactElasticCarousel extends React.Component<
-  ReactElasticCarouselProps & React.JSX
-> {}
+  ReactElasticCarouselProps & React.JSX.Element
+> { }
 
 export default ReactElasticCarousel;
