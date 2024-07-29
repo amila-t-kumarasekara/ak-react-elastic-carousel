@@ -45,7 +45,7 @@
     "classnames": "^2.5.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "react-swipeable": "^7.0.1",
-    "styled-components": "^5.3.11"
+    "styled-components": "^6.1.12"
   },
   "peerDependencies": {
     "prop-types": "<15.8.1 || >=15.8.1",
